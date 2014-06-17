@@ -1,14 +1,14 @@
 //
-//  MapTestTests.swift
-//  MapTestTests
+//  MapKitDwiftTests.swift
+//  MapKitDwiftTests
 //
-//  Created by Sergey Garazha on 06/06/14.
+//  Created by Sergey Garazha on 16/06/14.
 //  Copyright (c) 2014 self. All rights reserved.
 //
 
 import XCTest
 
-class MapTestTests: XCTestCase {
+class MapKitDwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

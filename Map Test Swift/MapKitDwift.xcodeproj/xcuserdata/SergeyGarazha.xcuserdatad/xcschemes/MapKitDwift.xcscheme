@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D282089D1941896B0087207C"
-               BuildableName = "MapTest.app"
-               BlueprintName = "MapTest"
-               ReferencedContainer = "container:MapTest.xcodeproj">
+               BlueprintIdentifier = "D24F7325194EB9F100C29445"
+               BuildableName = "MapKitDwift.app"
+               BlueprintName = "MapKitDwift"
+               ReferencedContainer = "container:MapKitDwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D28208AF1941896C0087207C"
-               BuildableName = "MapTestTests.xctest"
-               BlueprintName = "MapTestTests"
-               ReferencedContainer = "container:MapTest.xcodeproj">
+               BlueprintIdentifier = "D24F7337194EB9F100C29445"
+               BuildableName = "MapKitDwiftTests.xctest"
+               BlueprintName = "MapKitDwiftTests"
+               ReferencedContainer = "container:MapKitDwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D282089D1941896B0087207C"
-            BuildableName = "MapTest.app"
-            BlueprintName = "MapTest"
-            ReferencedContainer = "container:MapTest.xcodeproj">
+            BlueprintIdentifier = "D24F7325194EB9F100C29445"
+            BuildableName = "MapKitDwift.app"
+            BlueprintName = "MapKitDwift"
+            ReferencedContainer = "container:MapKitDwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D282089D1941896B0087207C"
-            BuildableName = "MapTest.app"
-            BlueprintName = "MapTest"
-            ReferencedContainer = "container:MapTest.xcodeproj">
+            BlueprintIdentifier = "D24F7325194EB9F100C29445"
+            BuildableName = "MapKitDwift.app"
+            BlueprintName = "MapKitDwift"
+            ReferencedContainer = "container:MapKitDwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D282089D1941896B0087207C"
-            BuildableName = "MapTest.app"
-            BlueprintName = "MapTest"
-            ReferencedContainer = "container:MapTest.xcodeproj">
+            BlueprintIdentifier = "D24F7325194EB9F100C29445"
+            BuildableName = "MapKitDwift.app"
+            BlueprintName = "MapKitDwift"
+            ReferencedContainer = "container:MapKitDwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
