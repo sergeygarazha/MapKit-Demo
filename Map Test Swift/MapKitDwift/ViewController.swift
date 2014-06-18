@@ -9,77 +9,41 @@
 import UIKit
 import MapKit
 import CoreLocation
-import AddressBook
 
 class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
                             
+    @IBOutlet var slider : UISlider
     @IBOutlet var map : MKMapView
-    @IBOutlet var textField : UITextField
     let manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        textField.delegate = self
         manager.delegate = self
-        
         if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.NotDetermined {
             manager.requestWhenInUseAuthorization()
         } else {
             manager.startUpdatingLocation()
         }
         
-        textField.becomeFirstResponder()
+        slider.addTarget(self, action: Selector("sliderMoved"), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func sliderMoved() {
+        let delta : Double = Double(slider.value)
+        let span = MKCoordinateSpanMake(delta, delta)
+        let center = map.userLocation.location.coordinate
+        var zoomRegion : MKCoordinateRegion = MKCoordinateRegion(center: center, span: span)
+        map.setRegion(zoomRegion, animated: false)
     }
     
     func locationManager(manager: CLLocationManager!,
         didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-            println("did change status to \(status.toRaw())")
-            manager.startUpdatingLocation()
-    }
-
-    func locationManager(manager: CLLocationManager!,
-        didUpdateLocations locations: AnyObject[]!) {
-            println("did update location")
-            map.setCenterCoordinate(manager.location.coordinate, animated: true)
+            
+        if status != CLAuthorizationStatus.NotDetermined {
             map.showsUserLocation = true
-    }
-    
-    func textField(textField: UITextField!,
-        shouldChangeCharactersInRange range: NSRange,
-        replacementString string: String!) -> Bool {
-            let str = "0123456789"
-            
-            if str.rangeOfString(string) || string == "" {
-                
-                let result = textField.text.bridgeToObjectiveC().stringByReplacingCharactersInRange(range, withString: string)
-                let ar = checkNumber(result)
-                
-                return true
-            }
-            
-            return false
-    }
-    
-    func checkNumber(nmber: String) -> AnyObject?[] {
-        var i = 0
-        var result: AnyObject?[] = []
-        let myPredicate = NSPredicate(format:"record.phoneNumber contains %@", nil)
-        let addressBook = ABAddressBookRef()
-        let thePeoples = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue()
-        let count = CFArrayGetCount(thePeoples)
-        
-        while i < count {
-//            let x: ABRecordRef? = CFArrayGetValueAtIndex(thePeoples, i)
-//            if let y: ABRecordRef! = x {
-//                result.append(x)
-//            }
-            i++
         }
-        
-        return result
-            //filteredArrayUsingPredicate(myPredicate);
     }
+    
 }
 

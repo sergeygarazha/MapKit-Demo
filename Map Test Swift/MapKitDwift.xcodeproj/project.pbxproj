@@ -14,7 +14,6 @@
 		D24F733F194EB9F100C29445 /* MapKitDwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24F733E194EB9F100C29445 /* MapKitDwiftTests.swift */; };
 		D24F7349194EBA0900C29445 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24F7348194EBA0900C29445 /* MapKit.framework */; };
 		D24F734B194EBA8700C29445 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24F734A194EBA8700C29445 /* CoreLocation.framework */; };
-		D24F734D194EC90200C29445 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24F734C194EC90200C29445 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		D24F733E194EB9F100C29445 /* MapKitDwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitDwiftTests.swift; sourceTree = "<group>"; };
 		D24F7348194EBA0900C29445 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D24F734A194EBA8700C29445 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D24F734C194EC90200C29445 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24F734D194EC90200C29445 /* AddressBook.framework in Frameworks */,
 				D24F734B194EBA8700C29445 /* CoreLocation.framework in Frameworks */,
 				D24F7349194EBA0900C29445 /* MapKit.framework in Frameworks */,
 			);
@@ -63,13 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D21EF219195162A6007A8369 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D24F734A194EBA8700C29445 /* CoreLocation.framework */,
+				D24F7348194EBA0900C29445 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D24F731D194EB9F100C29445 = {
 			isa = PBXGroup;
 			children = (
-				D24F734C194EC90200C29445 /* AddressBook.framework */,
-				D24F734A194EBA8700C29445 /* CoreLocation.framework */,
-				D24F7348194EBA0900C29445 /* MapKit.framework */,
 				D24F7328194EB9F100C29445 /* MapKitDwift */,
+				D21EF219195162A6007A8369 /* Frameworks */,
 				D24F733B194EB9F100C29445 /* MapKitDwiftTests */,
 				D24F7327194EB9F100C29445 /* Products */,
 			);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,61 +19,57 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2Ex-Hi-Ejo">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                             </mapView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAw-et-HBl">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="MG2-cR-see">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2Ex-Hi-Ejo" secondAttribute="trailing" id="4Wb-mA-NLm"/>
+                            <constraint firstItem="2Ex-Hi-Ejo" firstAttribute="centerX" secondItem="MG2-cR-see" secondAttribute="centerX" id="5di-Cx-kut"/>
                             <constraint firstItem="2Ex-Hi-Ejo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="GQw-kC-GaF"/>
-                            <constraint firstItem="eAw-et-HBl" firstAttribute="centerX" secondItem="2Ex-Hi-Ejo" secondAttribute="centerX" id="OQy-cQ-hdm"/>
-                            <constraint firstAttribute="bottom" secondItem="2Ex-Hi-Ejo" secondAttribute="bottom" id="WdI-Fb-7ta"/>
-                            <constraint firstItem="2Ex-Hi-Ejo" firstAttribute="top" secondItem="eAw-et-HBl" secondAttribute="bottom" constant="23" id="yiV-nm-mfq">
-                                <variation key="heightClass=regular" constant="30"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ex-Hi-Ejo" secondAttribute="bottom" id="WdI-Fb-7ta">
+                                <variation key="heightClass=regular" constant="87"/>
                             </constraint>
-                            <constraint firstItem="eAw-et-HBl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="71" id="yuA-MY-KNt"/>
-                            <constraint firstItem="eAw-et-HBl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="zKy-ZP-skf">
-                                <variation key="heightClass=regular" constant="42"/>
-                            </constraint>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MG2-cR-see" secondAttribute="bottom" constant="28" id="hOQ-Ob-3cw"/>
+                            <constraint firstItem="2Ex-Hi-Ejo" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ww6-vW-lJH"/>
+                            <constraint firstItem="MG2-cR-see" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="x0k-pb-iaw"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="eAw-et-HBl"/>
+                                <exclude reference="MG2-cR-see"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="4Wb-mA-NLm"/>
+                                <exclude reference="5di-Cx-kut"/>
                                 <exclude reference="GQw-kC-GaF"/>
                                 <exclude reference="WdI-Fb-7ta"/>
-                                <exclude reference="yiV-nm-mfq"/>
-                                <exclude reference="OQy-cQ-hdm"/>
-                                <exclude reference="yuA-MY-KNt"/>
-                                <exclude reference="zKy-ZP-skf"/>
+                                <exclude reference="ww6-vW-lJH"/>
+                                <exclude reference="x0k-pb-iaw"/>
+                                <exclude reference="hOQ-Ob-3cw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="MG2-cR-see"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
                                 <include reference="4Wb-mA-NLm"/>
+                                <include reference="5di-Cx-kut"/>
                                 <include reference="GQw-kC-GaF"/>
                                 <include reference="WdI-Fb-7ta"/>
-                                <include reference="yiV-nm-mfq"/>
-                                <include reference="OQy-cQ-hdm"/>
-                                <include reference="yuA-MY-KNt"/>
-                                <include reference="zKy-ZP-skf"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="eAw-et-HBl"/>
+                                <include reference="ww6-vW-lJH"/>
+                                <include reference="x0k-pb-iaw"/>
+                                <include reference="hOQ-Ob-3cw"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="map" destination="2Ex-Hi-Ejo" id="yya-eG-tC0"/>
-                        <outlet property="textField" destination="eAw-et-HBl" id="KB1-SA-BZ3"/>
+                        <outlet property="slider" destination="MG2-cR-see" id="d8p-aB-Hey"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
